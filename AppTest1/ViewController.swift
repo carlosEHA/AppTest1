@@ -160,6 +160,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                     }else{
                         let destination = self.storyboard?.instantiateViewController(withIdentifier: "infoCountryViewController") as! InfoCountryViewController
                         destination.infoCountry = self.identification
+                        destination.nameCountry = self.countriesArray[self.countrieSelected]
                         self.show(destination, sender: nil)
                     }
                 }

@@ -13,6 +13,7 @@ class InfoCountryViewController: UIViewController, UITextFieldDelegate{
     
     var infoCountry: NSDictionary = [:]
     var urlHelp:String = ""
+    var nameCountry:String = ""
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var urlHelpOutlet: UIButton!
     
@@ -36,6 +37,7 @@ class InfoCountryViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Información de pais:\(self.infoCountry)")
+        self.navigationItem.title = self.nameCountry
         self.hideKeyboard()
         self.inputField.delegate = self
         let inputType:String = self.infoCountry.value(forKey: "input_type") as! String
